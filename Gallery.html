@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vebbez - Gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* PARALLAX */
+    .parallax {
+      background-image: url('https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=1600&q=80');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Hover effect for images */
+    .hover-zoom {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .hover-zoom:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- HEADER -->
+  <header class="fixed w-full bg-black/90 backdrop-blur-md z-50 shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-6">
+      <h1 class="text-4xl font-extrabold tracking-widest">Vebbez</h1>
+      <nav>
+        <ul class="flex gap-10 text-lg">
+          <li><a href="index.html" class="hover:text-gray-400 transition-colors">Home</a></li>
+          <li><a href="collection.html" class="hover:text-gray-400 transition-colors">Collection</a></li>
+          <li><a href="about.html" class="hover:text-gray-400 transition-colors">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 transition-colors">Contact</a></li>
+          <li><a href="gallery.html" class="hover:text-gray-400 transition-colors">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PARALLAX HERO -->
+  <section class="parallax text-center text-white">
+    <div class="bg-black/60 p-10 rounded-xl">
+      <h2 class="text-6xl font-bold mb-4">VEBBEZ GALLERY</h2>
+      <p class="text-2xl text-gray-300 max-w-2xl mx-auto">
+        The essence of streetwear through our lenses.
+      </p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="py-32 px-6 bg-gray-900 text-center">
+    <h3 class="text-5xl font-bold mb-12">Our Gallery</h3>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfeiC5fAr0tQb_yBYAC_4gdoH3WWTW3NJ1tnFuY5_fM6yh63gsOm9K_Rerb8z65pImkk8&usqp=CAU" 
+           alt="Hoodie Black" class="hover-zoom rounded-2xl">
+      <img src="https://hmchile.vtexassets.com/arquivos/ids/7642112/Poleron-hoodie---Blanco---H-M-CL.jpg?v=638926478734700000"
+           alt="Hoodie White" class="hover-zoom rounded-2xl">
+      <img src="https://morbostore.com/cdn/shop/files/polo-negro_basico_2048x.jpg?v=1713307778"
+           alt="T-Shirt Black" class="hover-zoom rounded-2xl">
+      <img src="https://umusicstore.cl/cdn/shop/products/POLERA_MONSTRUO_BLANCA_MANGA_CORTA_ESPALDA.png?v=1648579004&width=1000"
+           alt="T-Shirt White" class="hover-zoom rounded-2xl">
+      <img src="https://eu-images.contentstack.com/v3/assets/blt7dcd2cfbc90d45de/bltad973a1fb7c07978/60dc11ec5543520fcbc3e904/42-30aa1b345c3a9ab388244953cda1608c0.jpg?format=pjpg&auto=webp&quality=75%2C90&width=3840"
+           alt="Urban Style" class="hover-zoom rounded-2xl">
+      <img src="https://www.babyfresh.co/cdn/shop/files/turi-gorro-beige-43592-743151_043592-1.jpg?v=1721837919"
+           alt="Beanie Beige" class="hover-zoom rounded-2xl">
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section class="py-32 px-6 bg-black text-center">
+    <h3 class="text-5xl font-bold mb-10">Behind the Scenes</h3>
+    <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+      Watch our latest collection come to life in this short clip.
+    </p>
+    <div class="flex justify-center">
+      <iframe width="800" height="450" 
+              src="https://www.youtube.com/embed/1xVdHf3p0XM" 
+              title="Vebbez Fashion Video" 
+              iframeborder="0" allowfullscreen 
+              class="rounded-2xl shadow-lg hover:scale-105 transition-transform">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black py-12 text-center text-gray-400 text-lg">
+    <p>&copy; 2025 Vebbez.✨</p>
+  </footer>
+
+</body>
+</html>
+

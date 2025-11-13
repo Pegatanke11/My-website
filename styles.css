@@ -1,0 +1,188 @@
+/* --- FUENTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+/* --- CONFIGURACIÓN GLOBAL --- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #0a0a0a, #000);
+  color: white;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* --- EFECTO PARALLAX EN EL FONDO --- */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05), transparent 70%);
+  z-index: -1;
+  animation: moveLight 10s infinite linear alternate;
+  pointer-events: none;
+}
+
+@keyframes moveLight {
+  from { transform: translate(-5%, -5%) rotate(0deg); }
+  to { transform: translate(5%, 5%) rotate(15deg); }
+}
+
+/* --- HEADER --- */
+header {
+  transition: all 0.4s ease;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+}
+
+header:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+/* --- NAV LINKS --- */
+nav a {
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* --- HERO TITLE (VEBBEZ) --- */
+h2 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px white, 0 0 20px #999; }
+  to { text-shadow: 0 0 25px white, 0 0 50px #aaa; }
+}
+
+/* --- BOTONES --- */
+a, button {
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover, button:hover {
+  transform: scale(1.07);
+  filter: brightness(1.2);
+}
+
+/* --- SECCIONES CON ENTRADA SUAVE --- */
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- TARJETAS DE PRODUCTO --- */
+.bg-gray-900 {
+  background: linear-gradient(160deg, #111, #000);
+  box-shadow: 0 0 25px rgba(255,255,255,0.03);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.bg-gray-900:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 50px rgba(255,255,255,0.08);
+}
+
+/* --- EFECTO DE FONDO BRILLANTE EN TÍTULOS DE SECCIONES --- */
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+  display: inline-block;
+}
+
+h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: white;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+/* --- FORMULARIO CONTACTO --- */
+form {
+  background: rgba(20,20,20,0.9);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  transition: all 0.4s ease;
+}
+
+form:hover {
+  box-shadow: 0 0 25px rgba(255,255,255,0.05);
+}
+
+form input, form textarea {
+  background-color: #000;
+  border: 1px solid #333;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+  border-color: white;
+  background-color: #111;
+}
+
+/* --- FOOTER --- */
+footer {
+  border-top: 1px solid rgba(255,255,255,0.05);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* --- SCROLLBAR PERSONALIZADA --- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* --- EFECTO DE MOVIMIENTO SUAVE AL HACER SCROLL --- */
+@keyframes scrollPulse {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.2); }
+}
+section:target {
+  animation: scrollPulse 1s ease;
+}
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vebbez - About Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* --- PARALLAX --- */
+    .parallax {
+      background-image: url('https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1600&q=80');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- HEADER -->
+  <header class="fixed w-full bg-black/90 backdrop-blur-md z-50 shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-6">
+      <h1 class="text-4xl font-extrabold tracking-widest">Vebbez</h1>
+      <nav>
+        <ul class="flex gap-10 text-lg">
+          <li><a href="index.html" class="hover:text-gray-400 transition-colors">Home</a></li>
+          <li><a href="collection.html" class="hover:text-gray-400 transition-colors">Collection</a></li>
+          <li><a href="about.html" class="hover:text-gray-400 transition-colors">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 transition-colors">Contact</a></li>
+          <li><a href="gallery.html" class="hover:text-gray-400 transition-colors">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PARALLAX -->
+  <section class="parallax text-center text-white">
+    <div class="bg-black/50 p-10 rounded-xl">
+      <h2 class="text-6xl font-bold mb-4">About Vebbez</h2>
+      <p class="text-2xl text-gray-300 max-w-2xl mx-auto">
+        Discover the vision behind our streetwear brand and what makes Vebbez unique.
+      </p>
+    </div>
+  </section>
+
+  <!-- ABOUT CONTENT -->
+  <section class="bg-gray-900 py-32 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-5xl font-bold mb-8 text-white">Our Story</h3>
+      <p class="text-xl text-gray-300 leading-relaxed mb-8">
+        Vebbez started with a simple idea: create streetwear that expresses individuality and attitude.  
+        Every piece is designed with care, combining minimalist aesthetics, urban style, and high quality.  
+        Our goal is to make clothing that doesn’t just cover you—it speaks for you.
+      </p>
+
+      <h3 class="text-4xl font-bold mb-6 text-white">Our Philosophy</h3>
+      <p class="text-xl text-gray-300 leading-relaxed mb-8">
+        We believe in authenticity and self-expression.  
+        Fashion should be bold, fun, and reflective of your personality.  
+        With Vebbez, you wear more than clothes—you wear confidence.
+      </p>
+
+      <h3 class="text-4xl font-bold mb-6 text-white">Why Choose Us</h3>
+      <p class="text-xl text-gray-300 leading-relaxed">
+        Our collection is designed for comfort, style, and attitude.  
+        We pay attention to every detail, from fabric to fit, ensuring that Vebbez clothing stands out in the streets.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black py-12 text-center text-gray-400 text-lg">
+    <p>&copy; 2025 Vebbez.✨</p>
+  </footer>
+
+</body>
+</html>
+
